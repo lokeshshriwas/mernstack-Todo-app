@@ -1,0 +1,146 @@
+:root{
+  --main-bg: #212121;
+  --text-color: #fff;
+  --complete: rgb(248, 101, 101);
+  --todobg: #191818;
+}
+
+*{
+  margin: 0px;
+  padding: 0px ;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  user-select: none;
+}
+
+
+.container{
+  background-color: var(--main-bg);
+  height: 100vh;
+  width: 100vw;
+}
+
+.wrapper{
+  width: 60%;
+  height: 100%;
+  margin: 0px auto;
+  padding-top: 20px;
+  text-align: center;
+  color: var(--text-color);
+}
+
+.inputField{
+  width: 80%;
+  margin-top: 40px;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid black;
+  height: 40px;
+  font-size: 20px;
+  color: var(--text-color);
+  padding: 10px 10px;
+  background-color: var(--main-bg);
+  text-align: center;
+}
+
+
+.todos{
+  margin-top: 20px;
+  width: 100%;  
+}
+
+.todo{
+  margin: 0px auto;
+  display: flex;
+  height: 40px;
+  width: 80%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+  background-color: var(--todobg);
+  border-radius: 20px;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.text-container{
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  overflow: auto;
+}
+
+.text-container .text{
+  margin-left: 10px;
+  max-width: 80%;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.text-container .checkbox{
+  min-height: 15px;
+  min-width: 15px;
+  border-radius: 100%;
+  background-color: white;
+  cursor: pointer;
+}
+
+.deleteBtn{
+  min-height: 30px;
+  min-width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.is-completed{
+  text-decoration: line-through !important;
+
+}
+
+.is-completed .checkbox{
+  background-color: green;
+}
+
+.addBtn{
+  height: 40px;
+  width: 100px;
+  border: none;
+  border-radius: 20px;
+  background-color: green;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 850px) {
+    .wrapper{
+      width: 100vw;
+      margin: 0px ;
+    }
+
+    .addBtn{
+      margin-top: 10px;
+    }
+
+    .text{
+      font-size: 15px;
+      white-space: nowrap;
+    }
+
+    .todo{
+      padding: 0px 8px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .todo{
+      padding: 0px 5px;
+    }
+    .wrapper h1{
+      font-size: 25px
+    }
+}
